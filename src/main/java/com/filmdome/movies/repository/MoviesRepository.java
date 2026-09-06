@@ -14,9 +14,7 @@ public interface MoviesRepository extends JpaRepository<Movie, Integer> {
 
     boolean existsByTmdbId(Integer tmdbId);
 
-    List<Movie> findByTrending(int trending);
-
-    List<Movie> findByNewest(int newest);
+    Movie findByTmdbId(Integer tmdbId);
 
     List<Movie> findByNameContainingIgnoreCase(String name);
 
